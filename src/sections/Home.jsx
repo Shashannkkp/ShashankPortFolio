@@ -2,7 +2,8 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import avatar from "../assets/avator.png";
-import {  FaLinkedinIn, FaGithub, FaInstagram } from "react-icons/fa6";
+import {  FaLinkedinIn, FaGithub, FaInstagram  } from "react-icons/fa6";
+import { CgMail } from "react-icons/cg";
 import ParticleBackground from "../components/ParticlesBackground";
 
 const socials = [
@@ -10,6 +11,7 @@ const socials = [
   { Icon: FaLinkedinIn, label: "LinkedIn", href: "https://www.linkedin.com/in/shashank-patel57/" },
   { Icon: FaInstagram, label: "Instagram", href: "https://www.instagram.com/theshshankpatel/" },
   { Icon: FaGithub, label: "GitHub", href: "https://github.com/Shashannkkp" },
+  { Icon: CgMail, label: "Gmail", href: "mailto:patelshashank357@gmail.com" },
 ];
 
 
