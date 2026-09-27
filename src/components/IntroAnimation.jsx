@@ -4,13 +4,13 @@ import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
 
 gsap.registerPlugin(MorphSVGPlugin);
 
-export default function IntroAnimation({ onFinish }) {
-  const greetings = [
-    "Hello", "नमस्ते", "Hola", "Bonjour",
-    "Ciao", "Olá", "Здравствуйте",
-    "Merhaba", "Γειά", "Hej", "Hallo", "Salam"
-  ];
+const greetings = [
+  "Hello", "नमस्ते", "Hola", "Bonjour",
+  "Ciao", "Olá", "Здравствуйте",
+  "Merhaba", "Γειά", "Hej", "Hallo"
+];
 
+export default function IntroAnimation({ onFinish }) {
   const [index, setIndex] = useState(0);
   const overlayRef = useRef(null);
   const greetingRef = useRef(null);
@@ -34,7 +34,7 @@ export default function IntroAnimation({ onFinish }) {
 
       greetingTimer = setTimeout(() => {
         const tl = gsap.timeline({
-          onComplete: () => onFinish && onFinish(),
+          onComplete: () => onFinish?.(),
         });
 
         tl.to([overlayRef.current, greetingRef.current], {
@@ -59,7 +59,7 @@ export default function IntroAnimation({ onFinish }) {
   return (
     <div
       ref={overlayRef}
-      className="fixed inset-0 z-[9999] flex items-center justify-center text-white overflow-hidden pointer-events-none"
+      className="fixed inset-0 z-9999 flex items-center justify-center text-white overflow-hidden pointer-events-none"
     >
       <h1
         ref={greetingRef}
