@@ -110,6 +110,10 @@ const Footer = () => {
           “Success is when preparation meets opportunity.”
         </p>
 
+        <p className="italic max-w-xl text-bold text-shadow-amber-200 text-emerald-200 animate-pulse">
+           Mail - patelshashank357@gmail.com
+        </p>
+
         {/* --- Copyright / Trademark --- */}
         {/* Auto-updates year dynamically */}
         <p className="text-xs text-gray-400">
